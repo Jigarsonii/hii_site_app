@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hii Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Beth+Ellen|Ubuntu&display=swap" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}">
+
+</head>
+<body>
+<div class="page-header">
+    <h1><a href="{% url 'post_list' %}">CP BLOG</a></h1>
+</div>
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+           {% block content %}
+           {% endblock %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
