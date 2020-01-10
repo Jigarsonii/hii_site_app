@@ -15,5 +15,5 @@ urlpatterns = [
 
     path('post/<int:pk>/publish/', views.post_publish, name='post_publish'),
 
-    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
+
 ]
