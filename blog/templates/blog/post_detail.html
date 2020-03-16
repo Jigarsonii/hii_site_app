@@ -19,5 +19,22 @@
             {% endif %}
             <h1> {{ post.title }}</h1>
             <p>{{ post.text|linebreaksbr}}</p>
+
+            <hr>
+
+            <a href="{% url 'add_comments_to_post' pk=post.pk %}"><button class="btn btn-secondary">Add comment</button></a>
+
+            {% for comment in post.comments.all %}
+                <div class="comment">
+                    <div class="date" >
+                        <p>{{ comment.created_date}}</p>
+                    </div>
+                    <strong>{{comment.author}}</strong>
+                    <p>{{ comment.text}}</p>
+                </div>
+            {% empty %}
+            <p>No comments yet...</p>
+
+            {% endfor %}
         </div>
 {% endblock%}
