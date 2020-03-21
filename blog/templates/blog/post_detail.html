@@ -29,6 +29,7 @@
                     <div class="date" >
                         <p>{{ comment.created_date}}</p>
                     </div>
+                    <a href= "{% url 'comment_remove' pk=comment.pk%}"><i class="fas fa-minus-circle"></i></a>
                     <strong>{{comment.author}}</strong>
                     <p>{{ comment.text}}</p>
                 </div>
