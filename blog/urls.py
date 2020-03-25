@@ -23,4 +23,6 @@ urlpatterns = [
 
     path('post/<int:pk>/delete/', views.post_delete, name='post_delete'),
 
+    path('signup', views.signup, name='signup'),
+
 ]
