@@ -1,5 +1,5 @@
 certifi==2019.6.16
-Django==2.2.4
+Django==2.2.27
 Markdown==3.2.1
 mistune==0.8.4
 Pygments==2.6.1
